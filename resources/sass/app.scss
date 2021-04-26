@@ -1,0 +1,271 @@
+// Fonts
+//@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import '_variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+}
+
+.content, .row{
+  padding: 0 !important;
+}
+
+.btn, .badge {
+  font-size: .8rem !important;
+  white-space: nowrap !important;
+
+  & > b {
+    //@media screen and (max-width: 768px) {
+      display: none !important;
+    //}
+  }
+}
+
+.form-logo{
+  @extend .flex;
+
+  .form-brand-image{
+    width: 40px !important;
+    opacity: .8;
+  }
+
+  a {
+    @extend .flex;
+
+    padding: 0;
+    margin-left: 10px;
+    b{
+      font-size: 1.8rem;
+      color: rgba($black, .4);
+    }
+  }
+}
+
+
+.cursor-pointer{
+  cursor: pointer !important;
+}
+
+.cursor-not{
+  cursor: not-allowed !important;
+}
+
+.custom-switch > input.custom-control-input:checked{
+  & ~ label.custom-control-label::before {
+    border-color: $success !important;
+    background-color: $success !important;
+  }
+}
+
+.heigth70{
+  min-height: 70vh !important; 
+}
+
+.heigth30{
+  min-height: 20vh; 
+}
+
+.card{
+  padding: 0 !important;
+}
+
+.card-custom{
+  .card-header, .card-tools {
+    padding: 5px !important;
+    background: transparent !important;
+    @extend .flex;
+  }
+
+  .card-header{
+    justify-content: space-between !important;
+    background: transparent !important;
+  }
+
+  .card-tools{
+    justify-content: flex-end !important;
+    align-self: flex-start !important;
+    min-width: 50% !important;
+    padding-right: 20px !important;
+  }
+
+  .card-body{
+    overflow-x: scroll !important;
+  }
+
+  .card-title {
+    margin: 0;
+    min-width: 50%;
+    padding-left: 20px;
+    background: transparent !important;
+  }
+}
+
+.nav-tabs {
+  border: none;
+  .nav-item{
+    @extend .cursor-pointer;
+    margin: 5px !important;
+  }
+
+  .nav-link {
+    opacity: .5;
+    font-size: .8rem;
+
+    &.active{
+      opacity: 1 !important;
+    }
+  }
+
+}
+
+
+.card-quadra{
+  border: solid 1px rgba(#000, .2);
+  border-radius: 5px;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  width: 100%;
+  overflow-x: none !important;
+
+  @media screen and(max-width: 767px) {
+    min-width: 100%;
+    margin-top: 1% !important;
+  }
+  @media screen and(min-width: 768px) {
+    max-width: 48% !important;
+    margin: 1% !important;
+  }
+
+  &  > .card-header{
+    @extend .flex;
+    justify-content: space-around !important;
+
+    .card-title{
+      @media screen and(max-width: 767px) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  & > .card-body{
+    @extend .flex;
+    flex-direction: column !important;
+    padding: 5px  !important;
+    box-sizing: border-box !important;
+    overflow-x: none !important;
+    width: 100% !important;
+    align-self: stretch !important; 
+
+    & > .row {
+      width: 100% !important;
+      padding: 0;
+      //border: solid 1px red;
+    }
+
+    &::after{
+      padding: 0 !important;
+      height: 0 !important;
+      border: none !important;
+    }
+  }
+  
+  &-content{
+    @extend .flex;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    flex-wrap: wrap !important;
+    min-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .btn-app{
+    @extend .flex, .cursor-pointer;
+    border: solid 1px rgba(#000, .2);
+    box-sizing: border-box !important;
+    margin: 2px 2px !important;
+    width: calc(20% - 4px);
+
+    @media screen and(min-width: 768px) {
+      font-size: .8rem;
+    }
+
+    @media screen and(max-width: 767px) {
+      font-size: .75rem;
+    }
+
+    &:hover{
+      background: rgba(#000, .3);
+      color: white;
+    }
+  }
+
+  .reserved{
+    background: rgba($success, .6);
+    color: white;
+
+    &:hover{
+      background: rgba($success, 1);
+      color: white;
+    }
+  }
+
+  .closed{
+    background: rgba($danger, .6);
+    color: white;
+
+    &:hover{
+      background: rgba($danger, 1);
+      color: white;
+    }
+  }
+
+  .opened{
+    background: rgba($primary, .6);
+    color: white;
+
+    &:hover{
+      background: rgba($primary, 1);
+      color: white;
+    }
+  }
+}
+
+.user-block{
+  padding: 10px;
+  position: relative !important;
+
+  &.active{
+    border: solid 2px $primary;
+    border-radius: 5px;
+  }
+
+  .left{
+    padding: 10px;
+    align-self: flex-start !important;
+  }
+
+  .btn-tool{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+  }
+}
+
+.description-block {
+  .description-header{
+    font-size: .75rem !important;
+    font-weight: bold;
+  }
+
+  .description-text{
+    font-size: 1rem !important;
+  }
+}
