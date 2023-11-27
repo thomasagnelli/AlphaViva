@@ -1,4 +1,4 @@
-# SGR - Sistema de Gerenciamento de Reservas 
+# AlphaViva - Sistema para gerenciamento de reservas 
 
 
 
