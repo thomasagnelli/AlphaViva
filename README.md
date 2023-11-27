@@ -63,4 +63,4 @@ npm run watch
 
 
 ## Licença
-O SGR é um software de código aberto licenciado sob a [Licença MIT](https://opensource.org/licenses/MIT) desenvolvido e mantido carinhosamente por [Messias Dias](https://github.com/messiasdias).
+O SGR é um software de código aberto licenciado sob a [Licença MIT](https://opensource.org/licenses/MIT) desenvolvido e mantido carinhosamente por [Thomas Agnelli](https://github.com/thomasagnelli).
